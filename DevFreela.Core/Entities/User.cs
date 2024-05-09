@@ -22,6 +22,6 @@
         public List<UserSkill> Skills { get; private set; }
         public List<Project> OwnedProjects { get; private set; }
         public List<Project> FreeLanceProjects { get; private set; }
-        public List<ProjectComment> Comments { get; set; }
+        public List<ProjectComment> Comments { get; private set; }
     }
 }

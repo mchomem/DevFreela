@@ -1,9 +1,8 @@
-﻿using DevFreela.Application.Services.Interfaces;
+﻿using DevFreela.Core.DTOs;
 using MediatR;
 
-namespace DevFreela.Application.Queries.GetAllSkills
+namespace DevFreela.Application.Queries.GetAllSkills;
+
+public class GetAllSkillsQuery : IRequest<List<SkillDTO>>
 {
-    public class GetAllSkillsQuery : IRequest<List<SkillViewModel>>
-    {
-    }
 }

@@ -1,15 +1,11 @@
 ﻿using DevFreela.Application.ViewModels;
 using MediatR;
 
-namespace DevFreela.Application.Queries.GetProjectById
-{
-    public class GetProjectByIdQuery : IRequest<ProjectDetailsViewModel>
-    {
-        public GetProjectByIdQuery(int id)
-        {
-            Id = id;
-        }
+namespace DevFreela.Application.Queries.GetProjectById;
 
-        public int Id { get; private set; }
-    }
+public class GetProjectByIdQuery : IRequest<ProjectDetailsViewModel>
+{
+    public GetProjectByIdQuery(int id) => Id = id;
+
+    public int Id { get; private set; }
 }

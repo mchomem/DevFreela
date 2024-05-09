@@ -1,9 +1,8 @@
-﻿namespace DevFreela.API.Models
+﻿namespace DevFreela.API.Models;
+
+public class CreateProjectModel
 {
-    public class CreateProjectModel
-    {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-    }
+    public int Id { get; set; }
+    public string Title { get; set; }
+    public string Description { get; set; }
 }
