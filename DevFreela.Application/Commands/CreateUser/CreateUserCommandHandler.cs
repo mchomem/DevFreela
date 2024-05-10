@@ -1,8 +1,4 @@
-﻿using DevFreela.Core.Entities;
-using DevFreela.Core.Repositories;
-using MediatR;
-
-namespace DevFreela.Application.Commands.CreateUser;
+﻿namespace DevFreela.Application.Commands.CreateUser;
 
 internal class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, int>
 {

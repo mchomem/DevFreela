@@ -1,11 +1,4 @@
-﻿using Dapper;
-using DevFreela.Core.Entities;
-using DevFreela.Core.Repositories;
-using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-
-namespace DevFreela.Infrastructure.Persistence.Repositories;
+﻿namespace DevFreela.Infrastructure.Persistence.Repositories;
 
 public class ProjectRepository : IProjectRepository
 {

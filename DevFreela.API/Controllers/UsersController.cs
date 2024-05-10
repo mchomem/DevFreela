@@ -1,10 +1,4 @@
-﻿using DevFreela.API.Models;
-using DevFreela.Application.Commands.CreateUser;
-using DevFreela.Application.Queries.GetUser;
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
-
-namespace DevFreela.API.Controllers;
+﻿namespace DevFreela.API.Controllers;
 
 [Route("api/[Controller]")]
 [ApiController]

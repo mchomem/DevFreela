@@ -1,6 +1,4 @@
-﻿using MediatR;
-
-namespace DevFreela.Application.Commands.CreateUser;
+﻿namespace DevFreela.Application.Commands.CreateUser;
 
 public class CreateUserCommand : IRequest<int>
 {

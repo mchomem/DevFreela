@@ -1,16 +1,8 @@
-using DevFreela.API.Filters;
-using DevFreela.Application.Commands.CreateProject;
-using DevFreela.Application.Validators;
-using DevFreela.Core.Repositories;
-using DevFreela.Infrastructure.Persistence;
-using DevFreela.Infrastructure.Persistence.Repositories;
-using FluentValidation.AspNetCore;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
+    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>());
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -21,9 +13,6 @@ builder.Services.AddDbContext<DevFreelaDbContext>(options => options.UseSqlServe
 builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ISkillRepository, SkillRepository>();
-
-builder.Services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
-    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>());
 
 builder.Services.AddMediatR(typeof(CreateProjectCommand));
 

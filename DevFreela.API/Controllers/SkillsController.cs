@@ -1,8 +1,4 @@
-﻿using DevFreela.Application.Queries.GetAllSkills;
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
-
-namespace DevFreela.API.Controllers;
+﻿namespace DevFreela.API.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

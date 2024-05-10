@@ -1,8 +1,4 @@
-﻿using DevFreela.Core.Entities;
-using DevFreela.Core.Repositories;
-using MediatR;
-
-namespace DevFreela.Application.Commands.CreateProject;
+﻿namespace DevFreela.Application.Commands.CreateProject;
 
 public class CreateProjectCommandHandler : IRequestHandler<CreateProjectCommand, int>
 {

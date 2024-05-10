@@ -1,8 +1,4 @@
-﻿using DevFreela.Application.Commands.CreateUser;
-using FluentValidation;
-using System.Text.RegularExpressions;
-
-namespace DevFreela.Application.Validators;
+﻿namespace DevFreela.Application.Validators;
 
 public class CreateUserCommandValidator : AbstractValidator<CreateUserCommand> // "CreateUserCommand" é a classe de entrada de dados, a ser validado.
 {

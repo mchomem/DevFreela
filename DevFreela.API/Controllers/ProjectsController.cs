@@ -1,15 +1,4 @@
-﻿using DevFreela.Application.Commands.CreateComment;
-using DevFreela.Application.Commands.CreateProject;
-using DevFreela.Application.Commands.DeleteProject;
-using DevFreela.Application.Commands.FinishProject;
-using DevFreela.Application.Commands.StartProject;
-using DevFreela.Application.Commands.UpdateProject;
-using DevFreela.Application.Queries.GetAllProjects;
-using DevFreela.Application.Queries.GetProjectById;
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
-
-namespace DevFreela.API.Controllers;
+﻿namespace DevFreela.API.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

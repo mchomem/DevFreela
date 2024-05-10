@@ -1,7 +1,4 @@
-﻿using DevFreela.Application.ViewModels;
-using MediatR;
-
-namespace DevFreela.Application.Queries.GetAllProjects;
+﻿namespace DevFreela.Application.Queries.GetAllProjects;
 
 public class GetAllProjectQuery : IRequest<List<ProjectViewModel>>
 {

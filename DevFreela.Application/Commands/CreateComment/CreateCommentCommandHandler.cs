@@ -1,8 +1,4 @@
-﻿using DevFreela.Core.Entities;
-using DevFreela.Core.Repositories;
-using MediatR;
-
-namespace DevFreela.Application.Commands.CreateComment;
+﻿namespace DevFreela.Application.Commands.CreateComment;
 
 public class CreateCommentCommandHandler : IRequestHandler<CreateCommentCommand, Unit> // o Unit representa que não será retornado nada (void)
 {

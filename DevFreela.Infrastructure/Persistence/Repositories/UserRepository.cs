@@ -1,8 +1,4 @@
-﻿using DevFreela.Core.Entities;
-using DevFreela.Core.Repositories;
-using Microsoft.EntityFrameworkCore;
-
-namespace DevFreela.Infrastructure.Persistence.Repositories;
+﻿namespace DevFreela.Infrastructure.Persistence.Repositories;
 
 public class UserRepository : IUserRepository
 {

@@ -1,8 +1,4 @@
-﻿using DevFreela.Application.ViewModels;
-using DevFreela.Core.Repositories;
-using MediatR;
-
-namespace DevFreela.Application.Queries.GetUser;
+﻿namespace DevFreela.Application.Queries.GetUser;
 
 public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, UserViewModel>
 {

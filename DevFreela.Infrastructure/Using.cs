@@ -1,0 +1,9 @@
+﻿global using Dapper;
+global using DevFreela.Core.DTOs;
+global using DevFreela.Core.Entities;
+global using DevFreela.Core.Repositories;
+global using Microsoft.Data.SqlClient;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Microsoft.Extensions.Configuration;
+global using System.Reflection;
