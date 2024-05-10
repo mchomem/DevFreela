@@ -4,7 +4,7 @@ using MediatR;
 
 namespace DevFreela.Application.Queries.GetProjectById;
 
-internal class GetProjectByIdQueryHandler : IRequestHandler<GetProjectByIdQuery, ProjectDetailsViewModel>
+public class GetProjectByIdQueryHandler : IRequestHandler<GetProjectByIdQuery, ProjectDetailsViewModel>
 {
     private readonly IProjectRepository _projectRepository;
 

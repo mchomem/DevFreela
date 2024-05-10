@@ -1,14 +1,13 @@
-﻿namespace DevFreela.Application.Services.Interfaces
-{
-    public class SkillViewModel
-    {
-        public SkillViewModel(int id, string description)
-        {
-            Id = id;
-            Description = description;
-        }
+﻿namespace DevFreela.Application.Services.Interfaces;
 
-        public int Id { get; private set; }
-        public string Description { get; private set; }
+public class SkillViewModel
+{
+    public SkillViewModel(int id, string description)
+    {
+        Id = id;
+        Description = description;
     }
+
+    public int Id { get; private set; }
+    public string Description { get; private set; }
 }

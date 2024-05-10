@@ -10,7 +10,6 @@ namespace DevFreela.API.Controllers;
 [ApiController]
 public class UsersController : ControllerBase
 {
-    //private readonly IUserService _userService;
     private readonly IMediator _mediator;
 
     public UsersController(IMediator mediator)
@@ -24,19 +23,19 @@ public class UsersController : ControllerBase
 
         var user = await _mediator.Send(query);
 
-        if(user == null)
+        if (user == null)
             return NotFound();
 
         return Ok(user);
     }
-    
+
     // api/users
     [HttpPost]
     public async Task<IActionResult> Post([FromBody] CreateUserCommand command)
     {
         var id = await _mediator.Send(command);
 
-        return CreatedAtAction(nameof(GetById), new { id = 1 }, command);
+        return CreatedAtAction(nameof(GetById), new { id = id }, command);
     }
 
     // api/users/1/login

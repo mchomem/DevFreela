@@ -17,13 +17,10 @@ public class ProjectsController : ControllerBase
 {
     private readonly IMediator _mediator;
 
-    public ProjectsController(IMediator mediator)
-    {
-        _mediator = mediator;
-    }
+    public ProjectsController(IMediator mediator) => _mediator = mediator;
 
     [HttpGet]
-    public async Task<IActionResult> Get([FromQuery] string query)
+    public async Task<IActionResult> Get(string? query)
     {
         var getAllProjectsQuery = new GetAllProjectQuery(query);
 
@@ -48,12 +45,9 @@ public class ProjectsController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Post([FromBody] CreateProjectCommand command)
     {
-        if (command.Title.Length > 50)
-            return BadRequest();
-
         var id = await _mediator.Send(command);
 
-        return CreatedAtAction(nameof(GetById), new { id }, command);
+        return CreatedAtAction(nameof(GetById), new { id = id}, command);
     }
 
     [HttpPut]
