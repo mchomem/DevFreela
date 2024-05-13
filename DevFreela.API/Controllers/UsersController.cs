@@ -1,6 +1,4 @@
-﻿using DevFreela.Application.Commands.LoginUserChangePassword;
-
-namespace DevFreela.API.Controllers;
+﻿namespace DevFreela.API.Controllers;
 
 [Route("api/[Controller]")]
 [ApiController]
