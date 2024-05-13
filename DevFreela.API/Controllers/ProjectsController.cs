@@ -47,9 +47,6 @@ public class ProjectsController : ControllerBase
     [Authorize(Roles = "client")]
     public async Task<IActionResult> Put(int id, [FromBody] UpdateProjectCommand command)
     {
-        if (command.Description.Length > 200)
-            return BadRequest();
-
         await _mediator.Send(command);
 
         return NoContent();

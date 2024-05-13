@@ -13,7 +13,7 @@ public class UpdateProjectCommandHandler : IRequestHandler<UpdateProjectCommand,
 
         project.Update(request.Title, request.Description, request.TotalCost);
 
-        await _projectRepository.SaveChangesAsync();   
+        await _projectRepository.SaveChangesAsync();
 
         return Unit.Value;
     }

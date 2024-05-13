@@ -27,4 +27,9 @@ public class User : BaseEntity
     public List<Project> OwnedProjects { get; private set; }
     public List<Project> FreeLanceProjects { get; private set; }
     public List<ProjectComment> Comments { get; private set; }
+
+    public void ChangePassword(string password)
+    {
+        Password = password;
+    }
 }

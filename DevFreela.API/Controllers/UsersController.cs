@@ -1,4 +1,6 @@
-﻿namespace DevFreela.API.Controllers;
+﻿using DevFreela.Application.Commands.LoginUserChangePassword;
+
+namespace DevFreela.API.Controllers;
 
 [Route("api/[Controller]")]
 [ApiController]
@@ -44,5 +46,16 @@ public class UsersController : ControllerBase
             return BadRequest();
 
         return Ok(loginUserViewModel);
+    }
+
+    [HttpPut("change-password")]
+    public async Task<IActionResult> ChangePassword([FromBody] LoginUserChangePasswordCommand command)
+    {
+        var user = await _mediator.Send(command);
+
+        if (user == null)
+            return BadRequest("Não foi possível alterar a senha");
+
+        return Ok(user);
     }
 }

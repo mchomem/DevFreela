@@ -7,6 +7,7 @@ global using DevFreela.Application.Commands.FinishProject;
 global using DevFreela.Application.Commands.LoginUser;
 global using DevFreela.Application.Commands.StartProject;
 global using DevFreela.Application.Commands.UpdateProject;
+global using DevFreela.Application.InputModels;
 global using DevFreela.Application.Queries.GetAllProjects;
 global using DevFreela.Application.Queries.GetAllSkills;
 global using DevFreela.Application.Queries.GetProjectById;

@@ -20,4 +20,14 @@ public class UserRepository : IUserRepository
 
     public async Task<User> GetUserByEmailAndPasswordAsync(string email, string passwordHash)
         => await _dbContext.Users.SingleOrDefaultAsync(x => x.Email == email && x.Password == passwordHash);
+
+    public async Task<User> ChangePasswordAsync(User user, string newPasswordHash)
+    {
+        user.ChangePassword(newPasswordHash);
+
+        _dbContext.Users.Update(user);
+        await _dbContext.SaveChangesAsync();
+
+        return user;
+    }
 }
