@@ -54,7 +54,7 @@ public class UsersController : ControllerBase
         var user = await _mediator.Send(command);
 
         if (user == null)
-            return BadRequest("Não foi possível alterar a senha");
+            return BadRequest("It's impossible change your password.");
 
         return Ok(user);
     }
