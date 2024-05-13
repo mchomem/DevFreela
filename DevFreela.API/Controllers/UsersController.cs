@@ -2,6 +2,7 @@
 
 [Route("api/[Controller]")]
 [ApiController]
+[Authorize]
 public class UsersController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -25,6 +26,7 @@ public class UsersController : ControllerBase
 
     // api/users
     [HttpPost]
+    [AllowAnonymous]
     public async Task<IActionResult> Post([FromBody] CreateUserCommand command)
     {
         var id = await _mediator.Send(command);
@@ -32,10 +34,15 @@ public class UsersController : ControllerBase
         return CreatedAtAction(nameof(GetById), new { id = id }, command);
     }
 
-    // api/users/1/login
-    [HttpPut("{id}/login")]
-    public IActionResult Login(int id, [FromBody] LoginModel login)
+    [AllowAnonymous]
+    [HttpPut("login")]
+    public async Task<IActionResult> Login([FromBody] LoginUserCommand command)
     {
-        return NoContent();
+        var loginUserViewModel = await _mediator.Send(command);
+
+        if(loginUserViewModel == null)
+            return BadRequest();
+
+        return Ok(loginUserViewModel);
     }
 }

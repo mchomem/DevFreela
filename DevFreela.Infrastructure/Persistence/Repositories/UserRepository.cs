@@ -17,4 +17,7 @@ public class UserRepository : IUserRepository
 
         return user.Id;
     }
+
+    public async Task<User> GetUserByEmailAndPasswordAsync(string email, string passwordHash)
+        => await _dbContext.Users.SingleOrDefaultAsync(x => x.Email == email && x.Password == passwordHash);
 }

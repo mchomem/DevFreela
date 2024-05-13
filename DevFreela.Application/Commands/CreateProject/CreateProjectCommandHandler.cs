@@ -18,7 +18,7 @@ public class CreateProjectCommandHandler : IRequestHandler<CreateProjectCommand,
                 request.TotalCost
             );
 
-        await _projectRepository.AddAsync (project);
+        await _projectRepository.AddAsync(project);
 
         return project.Id;
     }

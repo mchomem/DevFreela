@@ -2,6 +2,7 @@
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class SkillsController : ControllerBase
 {
     private readonly IMediator _mediator;
