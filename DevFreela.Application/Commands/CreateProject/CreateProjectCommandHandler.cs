@@ -13,7 +13,7 @@ public class CreateProjectCommandHandler : IRequestHandler<CreateProjectCommand,
             (
                 request.Title,
                 request.Description,
-                request.IdUser,
+                request.IdClient,
                 request.IdFreelancer,
                 request.TotalCost
             );
