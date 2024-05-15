@@ -11,7 +11,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevFreela.Infrastructure", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevFreela.Application", "DevFreela.Application\DevFreela.Application.csproj", "{794CECB1-D02E-4E9B-9A4B-CBBF7BEA83A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFreela.UnitTests", "DevFreela.UnitTests\DevFreela.UnitTests.csproj", "{FB44C584-42F9-4F32-AE0D-0B1C8FA65089}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevFreela.UnitTests", "DevFreela.UnitTests\DevFreela.UnitTests.csproj", "{FB44C584-42F9-4F32-AE0D-0B1C8FA65089}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Test", "0 - Test", "{C356FA4B-8126-4AE4-BD90-863BD35D554D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Core", "1 - Core", "{C9C6AA4D-2370-4CCA-A0B5-B4E17BE0E705}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Infrastructure", "2 - Infrastructure", "{37302842-0CFF-4463-A73F-93E8B3D2D63F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Presentation", "3 - Presentation", "{0E2DFECC-2FF4-4EFB-AC27-B4732C7110E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +50,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C7BBEACF-8990-4836-B134-012E0CC987D8} = {0E2DFECC-2FF4-4EFB-AC27-B4732C7110E5}
+		{0175ECA6-7920-441F-B4B3-9465D76EF04B} = {C9C6AA4D-2370-4CCA-A0B5-B4E17BE0E705}
+		{15796893-C28C-4333-A130-AD228F836E8E} = {37302842-0CFF-4463-A73F-93E8B3D2D63F}
+		{794CECB1-D02E-4E9B-9A4B-CBBF7BEA83A3} = {C9C6AA4D-2370-4CCA-A0B5-B4E17BE0E705}
+		{FB44C584-42F9-4F32-AE0D-0B1C8FA65089} = {C356FA4B-8126-4AE4-BD90-863BD35D554D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21E94064-7ACC-4415-A5DA-683EA67F58A6}
