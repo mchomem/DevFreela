@@ -19,4 +19,27 @@ steps:
   inputs:
     command: 'test'
   displayName: 'Running Tests'
+
+  # Para publicação na Nuvem do Azure:
+  # 1. Utilizar o ".NET Core" em "Tasks" e adicionar o comando "Publish":
+
+#- task: DotNetCoreCLI@2
+#  inputs:
+#    command: 'publish'
+#    publishWebProjects: true
   
+  # 2. Utilizar a Task "Azure App Service Deploy", selecionar, preencher os campos e após clicar em Add.
+  # Selecionar os seguintes valores para os campos
+
+  # Campo                 | Valor
+  # ----------------------|------------------------
+  # Azure subscription    | <assinatura existente>
+  # App Service type      | Web App on Linux (este valor vai depender de como foi criado o serviço de aplicação)
+  # App Service name      | (O nome do serviço que foi criado no portal.azure.com)
+  # Runtime Stack         | 6.0 (DOTNETCORE|6.0) ou a versão de .net utilizada no projeto e disponível para publicação
+
+  # 3. Cuidado com recursos da aplicação pois as instâncias estão locais, se utilizados a aplicação irá falhar.
+  # RabbitMq
+  # Base de dados
+  
+  # Deverão ser utilizadas configurações de nuvem tanto para RabbitMq quanto para o banco de dados.
