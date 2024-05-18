@@ -93,6 +93,6 @@ public class ProjectsController : ControllerBase
 
         await _mediator.Send(command);
 
-        return NoContent();
+        return Accepted();
     }
 }

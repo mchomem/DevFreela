@@ -2,5 +2,5 @@
 
 public interface IPaymentService
 {
-    Task<bool> ProcessPaymentAsync(PaymentInfoDto paymentInfoDto);
+    void ProcessPaymentAsync(PaymentInfoDto paymentInfoDto);
 }

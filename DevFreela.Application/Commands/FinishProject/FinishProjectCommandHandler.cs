@@ -15,17 +15,14 @@ public class FinishProjectCommandHandler : IRequestHandler<FinishProjectCommand,
     {
         var project = await _projectRepository.GetByIdAsync(request.Id);
 
-        project.Finish();
-
         var paymentInfoDto = new PaymentInfoDto(request.Id, request.CreditCardNumber, request.Cvv, request.ExpiresAt, request.FullName, request.Amount);
 
-        var result = await _paymentService.ProcessPaymentAsync(paymentInfoDto);
-
-        if (!result)
-            project.SetPaymentPending();
+        _paymentService.ProcessPaymentAsync(paymentInfoDto);
+        
+        project.SetPaymentPending();
 
         await _projectRepository.SaveChangesAsync();
 
-        return result;
+        return true;
     }
 }

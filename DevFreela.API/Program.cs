@@ -11,12 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddDbContext<DevFreelaDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DevFreelaCs")));
 
-builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<ISkillRepository, SkillRepository>();
-
-builder.Services.AddScoped<IAuthService, AuthService>();
-builder.Services.AddScoped<IPaymentService, PaymentService>();
+builder.Services.AddInfrastructure();
 
 builder.Services.AddMediatR(typeof(CreateProjectCommand));
 

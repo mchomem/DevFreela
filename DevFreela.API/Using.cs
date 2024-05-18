@@ -1,4 +1,5 @@
-﻿global using DevFreela.API.Filters;
+﻿global using DevFreela.API.Extensions;
+global using DevFreela.API.Filters;
 global using DevFreela.Application.Commands.CreateComment;
 global using DevFreela.Application.Commands.CreateProject;
 global using DevFreela.Application.Commands.CreateUser;
@@ -16,6 +17,7 @@ global using DevFreela.Application.Validators;
 global using DevFreela.Core.Repositories;
 global using DevFreela.Core.Services;
 global using DevFreela.Infrastructure.Auth;
+global using DevFreela.Infrastructure.MessageBus;
 global using DevFreela.Infrastructure.Payments;
 global using DevFreela.Infrastructure.Persistence;
 global using DevFreela.Infrastructure.Persistence.Repositories;
