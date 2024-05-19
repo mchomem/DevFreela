@@ -10,7 +10,7 @@ public class MessageBusService : IMessageBusService
         _factory = new ConnectionFactory
         {
             HostName = configuration.GetSection("RabbitMQ:HostName").Value,
-            //Port = Convert.ToInt32(configuration.GetSection("RabbitMQ:Port").Value),
+            Port = Convert.ToInt32(configuration.GetSection("RabbitMQ:Port").Value),
             UserName = configuration.GetSection("RabbitMQ:UserName").Value,
             Password = configuration.GetSection("RabbitMQ:Password").Value,
         };

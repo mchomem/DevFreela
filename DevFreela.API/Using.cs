@@ -9,6 +9,7 @@ global using DevFreela.Application.Commands.LoginUser;
 global using DevFreela.Application.Commands.LoginUserChangePassword;
 global using DevFreela.Application.Commands.StartProject;
 global using DevFreela.Application.Commands.UpdateProject;
+global using DevFreela.Application.Consumers;
 global using DevFreela.Application.Queries.GetAllProjects;
 global using DevFreela.Application.Queries.GetAllSkills;
 global using DevFreela.Application.Queries.GetProjectById;

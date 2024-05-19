@@ -1,7 +1,5 @@
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddHttpClient();
-
 // Add services to the container.
 builder.Services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
     .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>());
@@ -12,6 +10,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddDbContext<DevFreelaDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DevFreelaCs")));
 
 builder.Services.AddInfrastructure();
+
+builder.Services.AddHostedService<PaymentApprovedConsumer>();
+
+builder.Services.AddHttpClient();
 
 builder.Services.AddMediatR(typeof(CreateProjectCommand));
 

@@ -2,9 +2,9 @@
 
 public class PaymentInfoDto
 {
-    public PaymentInfoDto(int id, string creditCardNumber, string cvv, string expiresAt, string fullName, decimal amount)
+    public PaymentInfoDto(int idProject, string creditCardNumber, string cvv, string expiresAt, string fullName, decimal amount)
     {
-        Id = id;
+        IdProject = idProject;
         CreditCardNumber = creditCardNumber;
         Cvv = cvv;
         ExpiresAt = expiresAt;
@@ -12,7 +12,7 @@ public class PaymentInfoDto
         Amount = amount;
     }
 
-    public int Id { get; private set; }
+    public int IdProject { get; private set; }
     public string CreditCardNumber { get; private set; }
     public string Cvv { get; private set; }
     public string ExpiresAt { get; private set; }

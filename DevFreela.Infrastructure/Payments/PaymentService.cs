@@ -6,9 +6,7 @@ public class PaymentService : IPaymentService
     private const string QUEUE_NAME = "Payments";
 
     public PaymentService(IMessageBusService messageBusService)
-    {
-        _messageBusService = messageBusService;
-    }
+        => _messageBusService = messageBusService;
 
     public void ProcessPaymentAsync(PaymentInfoDto paymentInfoDto)
     {
