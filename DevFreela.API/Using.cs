@@ -2,6 +2,7 @@
 global using DevFreela.API.Filters;
 global using DevFreela.Application.Commands.CreateComment;
 global using DevFreela.Application.Commands.CreateProject;
+global using DevFreela.Application.Commands.CreateSkill;
 global using DevFreela.Application.Commands.CreateUser;
 global using DevFreela.Application.Commands.DeleteProject;
 global using DevFreela.Application.Commands.FinishProject;
@@ -13,6 +14,7 @@ global using DevFreela.Application.Consumers;
 global using DevFreela.Application.Queries.GetAllProjects;
 global using DevFreela.Application.Queries.GetAllSkills;
 global using DevFreela.Application.Queries.GetProjectById;
+global using DevFreela.Application.Queries.GetSkillById;
 global using DevFreela.Application.Queries.GetUser;
 global using DevFreela.Application.Validators;
 global using DevFreela.Core.Repositories;

@@ -2,11 +2,13 @@
 
 public class SkillRepository : ISkillRepository
 {
+    private readonly DevFreelaDbContext _dbContext;
     private readonly string _connectionString;
 
-    public SkillRepository(IConfiguration configuration)
+    public SkillRepository(DevFreelaDbContext dbContext, IConfiguration configuration)
     {
-        _connectionString = configuration.GetConnectionString("DevFreelaCs");
+        _dbContext = dbContext;
+        _connectionString = configuration.GetConnectionString("DevFreelaCs")!;
     }
 
     public async Task<List<SkillDTO>> GetAllAsync()
@@ -22,4 +24,24 @@ public class SkillRepository : ISkillRepository
             return skills.ToList();
         }
     }
+
+    public async Task<Skill> GetByIdAsync(int id)
+    {
+        var skill = await _dbContext.Skills
+            .SingleOrDefaultAsync(x => x.Id == id)!;
+
+        if (skill == null)
+            return null!;
+
+        return skill;
+    }
+
+    public async Task AddAsync(Skill skill)
+    {
+        await _dbContext.Skills.AddAsync(skill);
+        await _dbContext.SaveChangesAsync();
+    }
+
+    public async Task SaveChangesAsync()
+        => await _dbContext.SaveChangesAsync();
 }
