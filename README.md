@@ -8,7 +8,7 @@ The following technologies and/or principles were used:
 - SOLID
 - CQRS
 - RabbitMQ
--MeadiatR
+- MeadiatR
 - Automapper
 - FluentValidation
 - CORS
