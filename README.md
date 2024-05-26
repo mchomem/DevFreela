@@ -14,3 +14,11 @@ The following technologies and/or principles were used:
 - CORS
 - Authorization
 - Authentication
+
+## Dependence
+
+To run this project, you must have an instance of the RabbitMQ service running. The easiest way to create the service is through a docker container.
+Windows users can have a [Docker Desktop](https://www.docker.com/products/docker-desktop/) installation (running) and run the following command to 
+make the RabbitMQ service available:
+
+`docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.13-management`
