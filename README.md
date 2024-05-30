@@ -7,11 +7,14 @@ The following technologies and/or principles were used:
 - Clean architecture
 - SOLID
 - CQRS
+- Dapper
+- Entity Framework Core
 - RabbitMQ
-- MeadiatR
+- MediatR
 - Automapper
 - FluentValidation
 - CORS
+- JWT Token
 - Authorization
 - Authentication
 
