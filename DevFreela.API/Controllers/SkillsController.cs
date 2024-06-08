@@ -37,4 +37,22 @@ public class SkillsController : ControllerBase
 
         return CreatedAtAction(nameof(GetById), new { id = id}, command);
     }
+
+    [HttpPut]
+    public async Task<IActionResult> Put(int id, [FromBody] UpdateSkillCommand command)
+    {
+        await _mediator.Send(command);
+
+        return NoContent();
+    }
+
+    [HttpDelete]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var command = new DeleteSkillCommand(id);
+
+        await _mediator.Send(command);
+
+        return NoContent();
+    }
 }

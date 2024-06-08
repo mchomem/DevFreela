@@ -6,4 +6,5 @@ public interface ISkillRepository
     public Task<Skill> GetByIdAsync(int id);
     public Task AddAsync(Skill skill);
     public Task SaveChangesAsync();
+    public Task DeleteAsync(Skill skill);
 }
