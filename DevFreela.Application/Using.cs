@@ -1,4 +1,5 @@
-﻿global using DevFreela.Application.Commands.CreateProject;
+﻿global using DevFreela.Application.Commands.CreateComment;
+global using DevFreela.Application.Commands.CreateProject;
 global using DevFreela.Application.Commands.CreateUser;
 global using DevFreela.Application.ViewModels;
 global using DevFreela.Core.DTOs;
