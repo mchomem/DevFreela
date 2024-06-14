@@ -20,6 +20,10 @@ The following technologies and/or principles were used:
 - Unity Test
 - Payments microsservice
 
+## Application architecture diagram
+
+![Project organization](/Docs/Images/project-organization.png)
+
 ## Dependences
 
 1. DevFreela Payments microsservice
