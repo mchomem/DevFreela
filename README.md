@@ -22,6 +22,10 @@ The following technologies and/or principles were used:
 
 ## Application architecture diagram
 
+![DevFreela-Archtecture.drawio](/Docs/Images/DevFreela-Archtecture.drawio.png)
+
+## Organization of project directories
+
 ![Project organization](/Docs/Images/project-organization.png)
 
 ## Dependences
