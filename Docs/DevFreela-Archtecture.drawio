@@ -1,0 +1,52 @@
+<mxfile host="Electron" modified="2024-06-14T15:00:33.249Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.5.3 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="OSFBzUo1AAE5BkRIOla9" version="24.5.3" type="device">
+  <diagram name="Page-1" id="1IjJkRSfa7nvA74JvRjt">
+    <mxGraphModel dx="989" dy="577" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eCDrAWpo5QIYrs8aI6T8-18" value="DevFreela" style="rounded=0;whiteSpace=wrap;html=1;horizontal=1;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=center;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="320" y="120" width="560" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="eCDrAWpo5QIYrs8aI6T8-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;fontColor=default;startArrow=block;startFill=1;entryX=-0.006;entryY=0.171;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="eCDrAWpo5QIYrs8aI6T8-7" target="eCDrAWpo5QIYrs8aI6T8-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="241" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCDrAWpo5QIYrs8aI6T8-7" value="Web API&lt;div&gt;&amp;lt;&amp;lt;.net 8&amp;gt;&amp;gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="360" y="201" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eCDrAWpo5QIYrs8aI6T8-9" value="Payments&lt;div&gt;&amp;lt;&amp;lt;microsservice&lt;/div&gt;&lt;div&gt;.net 8&amp;gt;&amp;gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="360" y="360" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eCDrAWpo5QIYrs8aI6T8-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;fontColor=default;exitX=0.001;exitY=0.835;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="eCDrAWpo5QIYrs8aI6T8-10" target="eCDrAWpo5QIYrs8aI6T8-9" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="400" as="sourcePoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCDrAWpo5QIYrs8aI6T8-10" value="(Publish/Subscribe Channel) &amp;lt;&amp;lt;RabbitMQ&amp;gt;&amp;gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;verticalAlign=middle;horizontal=0;labelBackgroundColor=none;fillColor=#f5f5f5;strokeColor=#666666;rounded=0;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="560" y="200" width="40" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="eCDrAWpo5QIYrs8aI6T8-21" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;horizontal=1;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=center;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="640" y="220" width="200" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="eCDrAWpo5QIYrs8aI6T8-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;fontColor=default;" parent="1" source="eCDrAWpo5QIYrs8aI6T8-7" target="eCDrAWpo5QIYrs8aI6T8-25" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="740" y="240" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="420" y="160" />
+              <mxPoint x="740" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCDrAWpo5QIYrs8aI6T8-25" value="&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;DevFreela&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;&amp;lt;&amp;lt;Sql Server&amp;gt;&amp;gt;&lt;/font&gt;&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffcc99;strokeColor=#36393d;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="675" y="280" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="T6JwW3noiWBCK5p3Xl3z-1" value="Database" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="776" y="220" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
